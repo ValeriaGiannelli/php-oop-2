@@ -30,7 +30,7 @@ require_once __DIR__.'/data/db.php';
     </div>
 
     <!-- stampo in pagina le informazioni dei prodotti -->
-    <div class="d-flex">
+    <div class="d-flex flex-wrap grid gap-3">
       
 
         <?php foreach($products as $product): ?>
@@ -68,6 +68,13 @@ require_once __DIR__.'/data/db.php';
                     <?php if($product instanceof PetBed && null !== $product->getDimensionWidth()):?>
                         <p class="card-text">
                             <?php echo $product->printDimension() ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <!-- tipologia di gioco -->
+                    <?php if($product instanceof Game && null !== $product->getGame()):?>
+                        <p class="card-text">
+                            <?php echo $product->getGame() ?>
                         </p>
                     <?php endif; ?>
 
