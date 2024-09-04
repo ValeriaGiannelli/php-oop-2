@@ -4,7 +4,7 @@
 
 class Product {
     public $name;
-    public $price;
+    protected $price;
     public $img;
     public $category;
     public $type;
@@ -15,6 +15,18 @@ class Product {
         $this->img = $_img;
         $this->category = $_category;
         $this->type = $_type;
+    }
+
+    // funzione per cambiare il prezzo
+    public function setPrice($price){
+        // varie modifiche
+        // restituisco il prezzo
+        $this->price = $price;
+    }
+
+    // funzione per usare il prezzo
+    public function getPrice(){
+        return $this->price;
     }
 
 }

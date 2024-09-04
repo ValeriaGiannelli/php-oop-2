@@ -37,7 +37,7 @@ require_once __DIR__.'/data/db.php';
 
                     <!-- prezzo -->
                     <p class="card-text">
-                        <?php echo $product->price ?> €
+                        <?php echo $product->getPrice() ?> €
                     </p>
 
                     <!-- tipologia -->
