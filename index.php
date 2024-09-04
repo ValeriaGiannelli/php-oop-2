@@ -50,16 +50,28 @@ require_once __DIR__.'/data/db.php';
                         <?php echo $product->category ?>
                     </p>
 
-                    <!-- descrizione -->
-                    <p class="card-text">
-                        <?php $product->printDescription() ?>
-                    </p>
-                    
+                    <!-- descrizione cibo -->
+                    <?php if(isset($product->foodType)):?>
+                        <p class="card-text">
+                            <?php $product->printDescription() ?>
+                        </p>
+                    <?php endif; ?>
+
+                    <!-- dimensioni accessori -->
+                    <?php if(isset($product->width)):?>
+                        <p class="card-text">
+                            <?php echo $product->printDimension() ?>
+                        </p>
+                    <?php endif; ?>
+
+
                     <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
                 </div>
             </div>
         <?php endforeach; ?>
     </div>
+
+    
     
 </body>
 </html>
