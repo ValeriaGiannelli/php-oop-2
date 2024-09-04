@@ -9,4 +9,14 @@ class Game extends Product {
         parent::__construct($_name, $_price, $_img, $_category, $_type);
         $this->gameType = $_gameType;
     }
+
+    public function setGame($gameType){
+        // controlli
+        $this->gameType = $gameType;
+    }
+
+
+    public function getGame(){
+        return $this->gameType;
+    }
 }
