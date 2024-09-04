@@ -3,7 +3,7 @@
 <?php
 
 class PetBed extends Product {
-    public $width;
+    private $width;
     private $height;
     private $depth;
 

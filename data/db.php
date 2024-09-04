@@ -10,7 +10,8 @@ $products = [
     new Food('Monge', 25.90, 'https://egress.storeden.net/jpg/60522e6f00f22078d0be0f11/file.jpg', '<i class="fa-solid fa-dog"></i>', 'alimento', 'M', '1-5 anni', 'secco'),
     new Food('Monge', 25.90, 'https://egress.storeden.net/jpg/60522e6f00f22078d0be0f11/file.jpg', '<i class="fa-solid fa-dog"></i>', 'alimento', 'XL', '>5 anni', 'secco'),
 
-    new PetBed('Cuccia Favolosa', 105.99, 'https://coseperanimali.com/wp-content/uploads/2021/03/cuccia-per-cani-da-intenro.jpg', '<i class="fa-solid fa-dog"></i>', 'accessorio', 120, 40, 70)
+    new PetBed('Cuccia Favolosa', 105.99, 'https://coseperanimali.com/wp-content/uploads/2021/03/cuccia-per-cani-da-intenro.jpg', '<i class="fa-solid fa-dog"></i>', 'accessorio', 120, 40, 70),
+    new PetBed('Cuccia Favolosa 2', 105.99, 'https://coseperanimali.com/wp-content/uploads/2021/03/cuccia-per-cani-da-intenro.jpg', '<i class="fa-solid fa-cat"></i>', 'accessorio', 70, 20, 40)
 ];
 
 

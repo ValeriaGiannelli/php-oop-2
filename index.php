@@ -23,9 +23,16 @@ require_once __DIR__.'/data/db.php';
     <title>Negozio animali Oop-2</title>
 </head>
 <body>
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Negozio per animali</h1>
+        </div>
+    </div>
 
     <!-- stampo in pagina le informazioni dei prodotti -->
     <div class="d-flex">
+      
+
         <?php foreach($products as $product): ?>
             <div class="card" style="width: 18rem;">
                 <img src="<?php echo $product->img ?>" class="card-img-top" alt="immagine del prodotto">
@@ -58,12 +65,11 @@ require_once __DIR__.'/data/db.php';
                     <?php endif; ?>
 
                     <!-- dimensioni accessori -->
-                    <?php if(isset($product->width)):?>
+                    <?php if($product instanceof PetBed && null !== $product->getDimensionWidth()):?>
                         <p class="card-text">
                             <?php echo $product->printDimension() ?>
                         </p>
                     <?php endif; ?>
-
 
                     <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
                 </div>
