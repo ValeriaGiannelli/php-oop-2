@@ -7,11 +7,13 @@ class Game extends Product {
 
     public function __construct(string $_name, float $_price, string $_img, string $_category, string $_type, string $_gameType){
         parent::__construct($_name, $_price, $_img, $_category, $_type);
-        $this->gameType = $_gameType;
+        $this->setGame($_gameType);
     }
 
     public function setGame($gameType){
-        // controlli
+        if(strlen($gameType) < 3){
+            throw new Exception('La parola deve essere almeno di 3 caratteri');
+        }
         $this->gameType = $gameType;
     }
 

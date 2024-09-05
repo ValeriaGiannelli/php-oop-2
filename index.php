@@ -4,6 +4,19 @@ require_once __DIR__.'/Model/Category.php';
 require_once __DIR__.'/Model/ProductType.php';
 require_once __DIR__.'/data/db.php';
 
+
+
+
+// try{
+//     $toy = new Game('Tiragraffi', 133.95, 'https://www.fenixshop24.com/1578-large_default/tiragraffi-angolare-per-gatti-alto-112-cm-con-corda-in-sisal-e-peluche-grigio.jpg', '<i class="fa-solid fa-cat"></i>', 'giochi', 'arrr');
+
+//     echo $toy->setGame('ar');
+// } catch (Exception $e){
+//     echo "<h1> Errore: " . $e->getMessage() . " </h1>";
+// }
+
+// die();
+
 ?>
 
 
@@ -74,7 +87,15 @@ require_once __DIR__.'/data/db.php';
                     <!-- tipologia di gioco -->
                     <?php if($product instanceof Game && null !== $product->getGame()):?>
                         <p class="card-text">
-                            <?php echo $product->getGame() ?>
+                            <!-- try e catch in getGame -->
+                            <?php 
+                                try{
+                                    echo $product->getGame();
+                                } catch (Exception $e){
+                                    echo "<h1> Errore: ". $e->getMessage() ."</h1>";
+                                }
+                            ?>
+                            
                         </p>
                     <?php endif; ?>
 

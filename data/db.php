@@ -16,6 +16,7 @@ $products = [
 
     new Game('Canna da pesca', 3.95, 'https://shop.zooplanet.it/wp-content/uploads/2023/07/A_FFP00477.jpg', '<i class="fa-solid fa-cat"></i>', 'giochi', 'caccia'),
     new Game('Tiragraffi', 133.95, 'https://www.fenixshop24.com/1578-large_default/tiragraffi-angolare-per-gatti-alto-112-cm-con-corda-in-sisal-e-peluche-grigio.jpg', '<i class="fa-solid fa-cat"></i>', 'giochi', 'arrampicata'),
+    new Game('Tiragraffi', 133.95, 'https://www.fenixshop24.com/1578-large_default/tiragraffi-angolare-per-gatti-alto-112-cm-con-corda-in-sisal-e-peluche-grigio.jpg', '<i class="fa-solid fa-cat"></i>', 'giochi', 'ar'),
 ];
 
 
