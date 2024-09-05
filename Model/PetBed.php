@@ -9,13 +9,16 @@ class PetBed extends Product {
 
     public function __construct(string $_name, float $_price, string $_img, string $_category, string $_type, int $_width, int $_height, int $_depth){
         parent::__construct($_name, $_price, $_img, $_category, $_type);
-        $this->width = $_width;
-        $this->height = $_height;
-        $this->depth = $_depth;
+
+        $this->setDimensions($_width, $_height, $_depth);
     }
 
-    public function setDimension($width, $height, $depth){
+    public function setDimensions($width, $height, $depth){
         // funzione
+        if($width < 0 || $height < 0 || $depth < 0){
+            throw new Exception('Il valore inserito non è valido');
+        }
+
         $this->width = $width;
         $this->height = $height;
         $this->depth = $depth;
@@ -25,9 +28,11 @@ class PetBed extends Product {
         return $this->width;
     }
 
+
     public function getDimensionHeight(){
         return $this->height;
     }
+
 
     public function getDimensionDepth(){
         return $this->depth;
