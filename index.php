@@ -7,15 +7,13 @@ require_once __DIR__.'/data/db.php';
 
 
 
-// try{
-//     $toy = new Game('Tiragraffi', 133.95, 'https://www.fenixshop24.com/1578-large_default/tiragraffi-angolare-per-gatti-alto-112-cm-con-corda-in-sisal-e-peluche-grigio.jpg', '<i class="fa-solid fa-cat"></i>', 'giochi', 'arrr');
+try{
+    $toy = new Game('Tiragraffi Prova errore', 133.95, 'https://www.fenixshop24.com/1578-large_default/tiragraffi-angolare-per-gatti-alto-112-cm-con-corda-in-sisal-e-peluche-grigio.jpg', '<i class="fa-solid fa-cat"></i>', 'giochi', 'arrr');
 
-//     echo $toy->setGame('ar');
-// } catch (Exception $e){
-//     echo "<h1> Errore: " . $e->getMessage() . " </h1>";
-// }
-
-// die();
+    echo $toy->setGame('ar');
+} catch (Exception $e){
+    echo "<h3> Errore: " . $e->getMessage() . " </h3>";
+}
 
 ?>
 
@@ -80,7 +78,16 @@ require_once __DIR__.'/data/db.php';
                     <!-- dimensioni accessori -->
                     <?php if($product instanceof PetBed && null !== $product->getDimensionWidth()):?>
                         <p class="card-text">
-                            <?php echo $product->printDimension() ?>
+                            <?php 
+                                try{
+                                    echo $product->printDimension();
+                                } catch (Exception $e){
+                                    echo $e->getMessage();
+                                }
+                            ?>
+
+
+                            <!-- <?php echo $product->printDimension() ?> -->
                         </p>
                     <?php endif; ?>
 

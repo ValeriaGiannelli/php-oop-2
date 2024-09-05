@@ -12,7 +12,7 @@ class Game extends Product {
 
     public function setGame($gameType){
         if(strlen($gameType) < 3){
-            throw new Exception('La parola deve essere almeno di 3 caratteri');
+            throw new Exception('La parola che hai scritto: '. $gameType . ' è sbagliata. Deve essere almeno di 3 caratteri');
         }
         $this->gameType = $gameType;
     }
